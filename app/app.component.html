@@ -1,0 +1,19 @@
+<p> using of</p>
+
+<div *ngFor="let user of users$ | async">
+  {{ user.name }}
+</div>
+<br> <br>
+<p>using map</p>
+<div *ngFor="let username of usernames$ | async">
+  {{ username }}
+</div>
+
+<br> <br>
+<p>using filter</p>
+<div *ngFor="let user of filteredUsers$ | async">
+  {{ user.name }}
+</div>
+<br> <br>
+<p>behaviour subject</p>
+<div *ngIf="user$ | async as user">{{ user.name }}</div>
